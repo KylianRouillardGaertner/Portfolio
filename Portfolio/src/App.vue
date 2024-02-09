@@ -47,9 +47,9 @@ export default {
           </svg>
         </button>
         <ul class="list-none text-white font-bold text-2xl">
-          <li class="mb-4"><RouterLink to="/">Home</RouterLink></li>
-          <li class="mb-4"><RouterLink to="/about">About</RouterLink></li>
-          <li class="mb-4">
+          <li class="mb-4" @click="toggleNav"><RouterLink to="/">Home</RouterLink></li>
+          <li class="mb-4" @click="toggleNav"><RouterLink to="/about">About</RouterLink></li>
+          <li class="mb-4" @click="toggleNav">
             <RouterLink to="/spline-scene">Spline</RouterLink>
           </li>
         </ul>
