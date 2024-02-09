@@ -20,7 +20,7 @@ export default {
     <div class="wrapper relative z-10">
       <div class="text-center absolute inset-x-0">
         <button
-          class="inline-block px-8 py-1 rounded-[1rem] bg-slate-500 mt-3"
+          class="inline-block px-8 py-1 rounded-[1rem] bg-slate-500 mt-5"
           @click="toggleNav"
         >
           <h1 class="text-xl font-bold">MENU</h1>
@@ -47,10 +47,14 @@ export default {
           </svg>
         </button>
         <ul class="list-none text-white font-bold text-2xl">
-          <li class="mb-4" @click="toggleNav"><RouterLink to="/">Home</RouterLink></li>
-          <li class="mb-4" @click="toggleNav"><RouterLink to="/about">About</RouterLink></li>
           <li class="mb-4" @click="toggleNav">
-            <RouterLink to="/spline-scene">Spline</RouterLink>
+            <RouterLink to="/home">Home</RouterLink>
+          </li>
+          <li class="mb-4" @click="toggleNav">
+            <RouterLink to="/about">About</RouterLink>
+          </li>
+          <li class="mb-4" @click="toggleNav">
+            <RouterLink to="/">Spline</RouterLink>
           </li>
         </ul>
       </nav>
