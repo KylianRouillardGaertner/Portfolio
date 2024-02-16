@@ -61,7 +61,7 @@ export default {
           <li class="mb-4" @click="toggleNav">
             <RouterLink to="/contact">Contact me</RouterLink>
           </li>
-          <li class="mt-4 flex flex-row items-center" @click="toggleNav">
+          <li class="mt-4 flex flex-row items-center">
             <div class="w-12">
               <a href="https://www.behance.net/kylianrouilla">
                 <img
@@ -96,9 +96,41 @@ export default {
   </header>
 
   <RouterView />
-  <footer
-    class="bg-gray-500 text-white h-[7.3rem] flex justify-center items-center"
-  >
-    <p>&copy; 2021 Kylian Rouillard Gaertner</p>
+  <footer class="bg-gray-900 text-white h-[7.3rem] px-10">
+    <span
+      class="inline-block w-full h-[0.15rem] bg-white rounded-full mb-6"
+    ></span>
+    <div class="flex justify-between items-center px-5">
+      <p>&copy; 2021 Kylian Rouillard Gaertner</p>
+      <li class="flex flex-row items-center" @click="toggleNav">
+        <div class="w-8">
+          <a href="https://www.behance.net/kylianrouilla">
+            <img
+              class="rounded-[3rem]"
+              src="../public/logo/Behance.webp"
+              alt="logo behance"
+            />
+          </a>
+        </div>
+        <div class="ml-2 w-8">
+          <a href="https://www.instagram.com/kylian_gtn/">
+            <img
+              class="rounded-[3rem]"
+              src="../public/logo/Instagram.webp"
+              alt="logo instagram"
+            />
+          </a>
+        </div>
+        <div class="ml-2 w-8">
+          <a href="https://www.linkedin.com/in/kylian-rouillard-gaertner/">
+            <img
+              class="rounded-[3rem]"
+              src="../public/logo/LinkedIn.webp"
+              alt="logo linkedin"
+            />
+          </a>
+        </div>
+      </li>
+    </div>
   </footer>
 </template>
