@@ -1,6 +1,29 @@
 <template>
   <main class="bg-gray-900 h-full pb-14 grid grid-cols-5 grid-rows-1">
-    <div class="md:col-span-3 col-span-5 bg-white mt-20"></div>
+    <div
+      class="md:col-span-3 col-span-5 mt-20 text-white flex justify-center items-center flex-col"
+    >
+      <div>
+        <div class="flex flex-row items-center mb-7">
+          <div class="bg-gray-500 rounded-full mr-5">
+            <img class="w-10 m-2" src="../../public/svg/pin.svg" alt="" />
+          </div>
+          <p class="text-xl"><strong>Adresse:</strong> Xx Rue palworld boum</p>
+        </div>
+        <div class="flex flex-row items-center mb-7">
+          <div class="bg-gray-500 rounded-full mr-5">
+            <img class="w-10 m-2" src="../../public/svg/phone.svg" alt="" />
+          </div>
+          <p class="text-xl"><strong>Tel:</strong> 07 67 XX XX XX</p>
+        </div>
+        <div class="flex flex-row items-center">
+          <div class="bg-gray-500 rounded-full mr-5">
+            <img class="w-10 m-2" src="../../public/svg/mail.svg" alt="" />
+          </div>
+          <p class="text-xl"><strong>Mail:</strong> Exemple123@gmail.com</p>
+        </div>
+      </div>
+    </div>
     <div class="md:col-span-2 col-span-5 mx-16 mt-20">
       <form action="">
         <div
