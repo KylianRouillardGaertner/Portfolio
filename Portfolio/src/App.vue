@@ -101,7 +101,7 @@ export default {
       class="inline-block w-full h-[0.15rem] bg-white rounded-full mb-6"
     ></span>
     <div class="flex justify-between items-center px-5">
-      <p>&copy; 2021 Kylian Rouillard Gaertner</p>
+      <p>&copy; 2024 Kylian Rouillard Gaertner</p>
       <li class="flex flex-row items-center" @click="toggleNav">
         <div class="w-8">
           <a href="https://www.behance.net/kylianrouilla">
