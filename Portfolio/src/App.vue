@@ -46,15 +46,49 @@ export default {
             />
           </svg>
         </button>
-        <ul class="list-none text-white font-bold text-2xl">
+        <ul
+          class="list-none text-white font-bold text-[2.5rem] h-full flex flex-col"
+        >
           <li class="mb-4" @click="toggleNav">
-            <RouterLink to="/home">Home</RouterLink>
+            <RouterLink to="/">Accueil</RouterLink>
           </li>
           <li class="mb-4" @click="toggleNav">
-            <RouterLink to="/about">About</RouterLink>
+            <RouterLink to="/projects">Projects</RouterLink>
           </li>
           <li class="mb-4" @click="toggleNav">
-            <RouterLink to="/">Spline</RouterLink>
+            <RouterLink to="/about">About me</RouterLink>
+          </li>
+          <li class="mb-4" @click="toggleNav">
+            <RouterLink to="/contact">Contact me</RouterLink>
+          </li>
+          <li class="mt-4 flex flex-row items-center" @click="toggleNav">
+            <div class="w-16">
+              <a href="https://www.behance.net/kylianrouilla">
+                <img
+                  class="rounded-[3rem]"
+                  src="../public/logo/Behance.webp"
+                  alt="logo behance"
+                />
+              </a>
+            </div>
+            <div class="ml-6 w-16">
+              <a href="https://www.instagram.com/kylian_gtn/">
+                <img
+                  class="rounded-[3rem]"
+                  src="../public/logo/Instagram.webp"
+                  alt="logo instagram"
+                />
+              </a>
+            </div>
+            <div class="ml-6 w-16">
+              <a href="https://www.linkedin.com/in/kylian-rouillard-gaertner/">
+                <img
+                  class="rounded-[3rem]"
+                  src="../public/logo/LinkedIn.webp"
+                  alt="logo linkedin"
+                />
+              </a>
+            </div>
           </li>
         </ul>
       </nav>
