@@ -47,7 +47,7 @@ export default {
           </svg>
         </button>
         <ul
-          class="list-none text-white font-bold text-[2.5rem] h-full flex flex-col"
+          class="list-none text-white font-bold text-[2.5rem] h-full flex justify-center flex-col"
         >
           <li class="mb-4" @click="toggleNav">
             <RouterLink to="/">Accueil</RouterLink>
@@ -62,7 +62,7 @@ export default {
             <RouterLink to="/contact">Contact me</RouterLink>
           </li>
           <li class="mt-4 flex flex-row items-center" @click="toggleNav">
-            <div class="w-16">
+            <div class="w-12">
               <a href="https://www.behance.net/kylianrouilla">
                 <img
                   class="rounded-[3rem]"
@@ -71,7 +71,7 @@ export default {
                 />
               </a>
             </div>
-            <div class="ml-6 w-16">
+            <div class="ml-6 w-12">
               <a href="https://www.instagram.com/kylian_gtn/">
                 <img
                   class="rounded-[3rem]"
@@ -80,7 +80,7 @@ export default {
                 />
               </a>
             </div>
-            <div class="ml-6 w-16">
+            <div class="ml-6 w-12">
               <a href="https://www.linkedin.com/in/kylian-rouillard-gaertner/">
                 <img
                   class="rounded-[3rem]"
@@ -96,4 +96,9 @@ export default {
   </header>
 
   <RouterView />
+  <footer
+    class="bg-gray-500 text-white h-[7.3rem] flex justify-center items-center"
+  >
+    <p>&copy; 2021 Kylian Rouillard Gaertner</p>
+  </footer>
 </template>
