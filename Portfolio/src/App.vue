@@ -2,6 +2,7 @@
 import { RouterLink } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
 
+
 export default {
   data() {
     return {
