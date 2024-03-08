@@ -1,5 +1,6 @@
 <script>
 import { RouterLink } from "vue-router";
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
   data() {
@@ -10,13 +11,22 @@ export default {
   methods: {
     toggleNav() {
       this.showNav = !this.showNav;
+      if (this.showNav) {
+        document.body.classList.add("overflow-hidden");
+      } else {
+        document.body.classList.remove("overflow-hidden");
+      }
     },
+  },
+  components: {
+    HelloWorld,
   },
 };
 </script>
 
 <template>
   <header>
+    <HelloWorld />
     <div class="wrapper relative z-10">
       <div class="text-center absolute inset-x-0">
         <button
@@ -47,7 +57,7 @@ export default {
           </svg>
         </button>
         <ul
-          class="list-none text-white font-bold text-[2.5rem] h-full flex justify-center flex-col"
+          class="list-none text-white font-bold text-[2rem] md:text-[2.5rem] h-full flex mt-12 md:mt-0 md:justify-center flex-col"
         >
           <li class="mb-4" @click="toggleNav">
             <RouterLink to="/">Accueil</RouterLink>
@@ -101,7 +111,7 @@ export default {
       class="inline-block w-full h-[0.15rem] bg-white rounded-full mb-6"
     ></span>
     <div class="flex justify-between items-center px-5">
-      <p>&copy; 2024 Kylian Rouillard Gaertner</p>
+      <p class="text-sm md:text-base">&copy; 2024 Kylian Rouillard--Gaertner</p>
       <li class="flex flex-row items-center" @click="toggleNav">
         <div class="w-8">
           <a href="https://www.behance.net/kylianrouilla">

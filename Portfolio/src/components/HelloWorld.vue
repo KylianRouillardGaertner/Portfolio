@@ -1,44 +1,31 @@
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
-</script>
-
+<!-- LoadingOverlay.vue -->
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
+  <div
+    v-if="isLoading"
+    class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50"
+  >
+    <div class="text-white text-2xl font-bold">
+      <i class="fas fa-spinner fa-spin"></i> Chargement en cours...
+    </div>
   </div>
 </template>
 
-<style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  position: relative;
-  top: -10px;
-}
+<script>
+export default {
+  data() {
+    return {
+      isLoading: true, // Définir la superposition de chargement comme visible par défaut
+    };
+  },
+  mounted() {
+    // Cacher la superposition de chargement lorsque le chargement initial de la page est terminé
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 4000);
+  },
+};
+</script>
 
-h3 {
-  font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
-}
+<style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 </style>

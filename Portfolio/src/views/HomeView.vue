@@ -20,20 +20,6 @@ const onSplineViewerMounted = async () => {
   try {
     // Attendre le chargement du script et récupérer le module complet de SplineViewer
     const splineViewerModule = await loadSplineViewerScript();
-
-    // Accéder à l'initialisation de SplineViewer s'il existe
-    if (splineViewerModule?.default?.initialize) {
-      const viewer = await splineViewerModule.default.initialize({
-        // Ajoutez ici les options spécifiques à SplineViewer
-        // Consultez la documentation de SplineViewer pour plus de détails
-      });
-
-      // Ajouter le viewer à un élément du DOM
-      const splineViewerContainer = document.getElementById("Spline");
-      viewer.mount(splineViewerContainer);
-    } else {
-      console.error("SplineViewer.initialize n'est pas défini dans le module.");
-    }
   } catch (error) {
     console.error("Erreur lors de l'instanciation de SplineViewer :", error);
   }
@@ -54,9 +40,3 @@ onMounted(() => {
     </div>
   </main>
 </template>
-
-<style>
-element.style {
-  display: none !important;
-}
-</style>
