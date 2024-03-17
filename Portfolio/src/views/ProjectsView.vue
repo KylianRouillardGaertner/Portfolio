@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-900 h-full pt-20 pb-14">
+  <div class="bg-main h-full pt-20 pb-14">
     <div class="grid grid-cols-3" style="grid-auto-rows: 1fr">
       <div
         v-for="(project, index) in projects"
@@ -10,10 +10,10 @@
         @mouseover="hoverProject(index)"
         @mouseleave="leaveProject()"
       >
-        <h3 class="text-black font-semibold absolute top-8 left-6 text-3xl">
+        <h3 class="font-semibold absolute top-8 left-6 text-3xl">
           {{ project.name }}
         </h3>
-        <p class="text-black absolute top-[70px] left-6 text-lg">
+        <p class="absolute top-[70px] left-6 text-lg">
           {{ project.resume }}
         </p>
         <img

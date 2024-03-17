@@ -2,7 +2,6 @@
 import { RouterLink } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
 
-
 export default {
   data() {
     return {
@@ -31,14 +30,14 @@ export default {
     <div class="wrapper relative z-10">
       <div class="text-center absolute inset-x-0">
         <button
-          class="inline-block px-8 py-1 rounded-[1rem] bg-slate-500 mt-5"
+          class="inline-block px-8 py-1 rounded-[1rem] bg-main-dark mt-5"
           @click="toggleNav"
         >
           <h1 class="text-xl font-bold">MENU</h1>
         </button>
       </div>
       <nav
-        class="fixed top-5 left-5 right-5 bottom-5 bg-slate-500 rounded-lg py-5 px-10 z-50"
+        class="fixed top-5 left-5 right-5 bottom-5 bg-main-dark rounded-lg py-5 px-10 z-50"
         :class="{ hidden: !showNav }"
       >
         <button class="fixed right-8 top-8" @click="toggleNav">
@@ -107,11 +106,11 @@ export default {
   </header>
 
   <RouterView />
-  <footer class="bg-gray-900 text-white h-[7.3rem] px-10">
+  <footer class="bg-main text-white px-10">
     <span
-      class="inline-block w-full h-[0.15rem] bg-white rounded-full mb-6"
+      class="inline-block w-full h-[0.15rem] bg-main-dark rounded-full"
     ></span>
-    <div class="flex justify-between items-center px-5">
+    <div class="flex justify-between items-center pt-[27px] pb-[30px] px-5">
       <p class="text-sm md:text-base">&copy; 2024 Kylian Rouillard--Gaertner</p>
       <li class="flex flex-row items-center" @click="toggleNav">
         <div class="w-8">

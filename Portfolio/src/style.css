@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "d-dindin-italic";
+  src: url("styles/d-din-italic-webfont.woff2") format("woff2"),
+    url("styles/d-din-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-dinregular";
+  src: url("styles/d-din-webfont.woff2") format("woff2"),
+    url("styles/d-din-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "d-dindin-bold";
+  src: url("styles/d-din-bold-webfont.woff2") format("woff2"),
+    url("styles/d-din-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "simply_roundedregular";
+  src: url("styles/simply_rounded-webfont.woff2") format("woff2"),
+    url("styles/simply_rounded-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'simply_roundedbold';
+    src: url('styles/simply_rounded_bold-webfont.woff2') format('woff2'),
+         url('styles/simply_rounded_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+  font-family: "d-dinregular";
+  color: #d13d25;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "simply_roundedregular";
+}

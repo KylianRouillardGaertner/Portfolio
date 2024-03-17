@@ -33,7 +33,7 @@ onMounted(() => {
 
 <template>
   <main class="z-0">
-    <div id="Spline" class="bg-gray-900 h-screen">
+    <div id="Spline" class="bg-main h-screen">
       <spline-viewer
         url="https://prod.spline.design/vTIodl-UoreKXge5/scene.splinecode"
       ></spline-viewer>
