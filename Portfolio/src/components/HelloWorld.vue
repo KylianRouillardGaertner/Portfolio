@@ -2,9 +2,9 @@
 <template>
   <div
     v-if="isLoading"
-    class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50"
+    class="fixed inset-0 flex items-center justify-center bg-main-dark bg-opacity-50 z-50"
   >
-    <div class="text-white text-2xl font-bold">
+    <div class="text-text text-2xl font-bold">
       <i class="fas fa-spinner fa-spin"></i> Chargement en cours...
     </div>
   </div>

@@ -37,7 +37,7 @@ export default {
         </button>
       </div>
       <nav
-        class="fixed top-5 left-5 right-5 bottom-5 bg-main-dark rounded-lg py-5 px-10 z-50"
+        class="fixed top-0 left-0 right-0 bottom-0 bg-main-dark rounded-lg py-5 px-10 z-50"
         :class="{ hidden: !showNav }"
       >
         <button class="fixed right-8 top-8" @click="toggleNav">
@@ -51,52 +51,55 @@ export default {
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              stroke-width="2"
+              stroke-width="3"
               d="M6 18L18 6M6 6l12 12"
             />
           </svg>
         </button>
         <ul
-          class="list-none text-white font-bold text-[2rem] md:text-[2.5rem] h-full flex mt-12 md:mt-0 md:justify-center flex-col"
+          class="list-none font-bold text-[2rem] md:text-[5rem] h-full flex mt-12 md:mt-6 md:justify-center md:items-center flex-col"
         >
-          <li class="mb-4" @click="toggleNav">
-            <RouterLink to="/">Accueil</RouterLink>
+          <li @click="toggleNav">
+            <RouterLink to="/" class="font-Rounded_Bold">Accueil</RouterLink>
           </li>
-          <li class="mb-4" @click="toggleNav">
-            <RouterLink to="/projects">Projects</RouterLink>
+          <li @click="toggleNav">
+            <RouterLink to="/projects" class="font-Rounded_Bold"
+              >Projects</RouterLink
+            >
           </li>
-          <li class="mb-4" @click="toggleNav">
-            <RouterLink to="/about">About me</RouterLink>
+          <li @click="toggleNav">
+            <RouterLink to="/about" class="font-Rounded_Bold"
+              >About me</RouterLink
+            >
           </li>
-          <li class="mb-4" @click="toggleNav">
-            <RouterLink to="/contact">Contact me</RouterLink>
+          <li @click="toggleNav">
+            <RouterLink to="/contact" class="font-Rounded_Bold"
+              >Contact me</RouterLink
+            >
           </li>
-          <li class="mt-4 flex flex-row items-center">
-            <div class="w-12">
-              <a href="https://www.behance.net/kylianrouilla">
-                <img
-                  class="rounded-[3rem]"
-                  src="../public/logo/Behance.webp"
-                  alt="logo behance"
-                />
+          <li class="mt-8 flex flex-row items-center gap-[18rem] text-[50px]">
+            <div>
+              <a
+                href="https://www.behance.net/kylianrouilla"
+                class="font-Rounded"
+              >
+                Behance
               </a>
             </div>
-            <div class="ml-6 w-12">
-              <a href="https://www.instagram.com/kylian_gtn/">
-                <img
-                  class="rounded-[3rem]"
-                  src="../public/logo/Instagram.webp"
-                  alt="logo instagram"
-                />
+            <div>
+              <a
+                href="https://www.instagram.com/kylian_gtn/"
+                class="font-Rounded"
+              >
+                Instagram
               </a>
             </div>
-            <div class="ml-6 w-12">
-              <a href="https://www.linkedin.com/in/kylian-rouillard-gaertner/">
-                <img
-                  class="rounded-[3rem]"
-                  src="../public/logo/LinkedIn.webp"
-                  alt="logo linkedin"
-                />
+            <div>
+              <a
+                href="https://www.linkedin.com/in/kylian-rouillard-gaertner/"
+                class="font-Rounded"
+              >
+                Linkedin
               </a>
             </div>
           </li>

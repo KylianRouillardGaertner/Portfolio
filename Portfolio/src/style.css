@@ -35,12 +35,11 @@
 }
 
 @font-face {
-    font-family: 'simply_roundedbold';
-    src: url('styles/simply_rounded_bold-webfont.woff2') format('woff2'),
-         url('styles/simply_rounded_bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "simply_roundedbold";
+  src: url("styles/simply_rounded_bold-webfont.woff2") format("woff2"),
+    url("styles/simply_rounded_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -53,4 +52,29 @@ h2,
 h3,
 h4 {
   font-family: "simply_roundedregular";
+}
+
+body {
+  --sb-track-color: #f0d5af;
+  --sb-thumb-color: #d13d25;
+  --sb-size: 8px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 50px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }

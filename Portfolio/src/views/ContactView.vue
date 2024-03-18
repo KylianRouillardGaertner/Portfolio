@@ -5,19 +5,19 @@
     >
       <div>
         <div class="flex flex-row items-center mb-7">
-          <img class="w-10 m-2" src="../../public/svg/pin.svg" alt="" />
+          <img class="w-10 m-2 mr-7" src="../../public/svg/pin.svg" alt="" />
           <p class="text-base md:text-xl">
             <strong>Adresse:</strong> Xx Rue palworld boum
           </p>
         </div>
         <div class="flex flex-row items-center mb-7">
-          <img class="w-10 m-2" src="../../public/svg/phone.svg" alt="" />
+          <img class="w-10 m-2 mr-7" src="../../public/svg/phone.svg" alt="" />
           <p class="text-base md:text-xl">
             <strong>Tel:</strong> 07 67 XX XX XX
           </p>
         </div>
         <div class="flex flex-row items-center">
-          <img class="w-10 m-2" src="../../public/svg/mail.svg" alt="" />
+          <img class="w-10 m-2 mr-7" src="../../public/svg/mail.svg" alt="" />
           <p class="text-base md:text-xl">
             <strong>Mail:</strong> Exemple123@gmail.com
           </p>
