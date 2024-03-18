@@ -34,7 +34,7 @@
               id="prenom"
               name="prenom"
               required
-              class="bg-main-light rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring focus:border-main-dark"
+              class="bg-main-light rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring focus:ring-main-dark"
             />
           </div>
           <div class="flex flex-col md:w-1/2">
@@ -44,7 +44,7 @@
               id="nom"
               name="nom"
               required
-              class="bg-main-light rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring focus:border-main-dark"
+              class="bg-main-light rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring focus:ring-main-dark"
             />
           </div>
         </div>
@@ -55,7 +55,7 @@
             id="email"
             name="email"
             required
-            class="bg-main-light rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring focus:border-main-dark"
+            class="bg-main-light rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring focus:ring-main-dark"
           />
         </div>
         <div class="flex flex-col mb-4">
@@ -65,7 +65,7 @@
             id="sujet"
             name="sujet"
             required
-            class="bg-main-light rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring focus:border-main-dark"
+            class="bg-main-light rounded-md px-4 py-2 mt-1 focus:outline-none focus:ring focus:ring-main-dark"
           />
         </div>
         <div class="flex flex-col mb-4">
@@ -75,7 +75,7 @@
             name="message"
             rows="4"
             required
-            class="bg-main-light rounded-md px-4 py-2 mt-1 mb-3 focus:outline-none focus:ring focus:border-white"
+            class="bg-main-light rounded-md px-4 py-2 mt-1 mb-3 focus:outline-none focus:ring focus:ring-main-dark"
           ></textarea>
         </div>
         <button
