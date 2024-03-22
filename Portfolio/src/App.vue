@@ -77,7 +77,7 @@ export default {
               >Contact me</RouterLink
             >
           </li>
-          <li class="mt-8 flex flex-row items-center gap-[18rem] text-[50px]">
+          <li class="mt-8 flex flex-row justify-center gap-[20%] text-[50px]">
             <div>
               <a
                 href="https://www.behance.net/kylianrouilla"

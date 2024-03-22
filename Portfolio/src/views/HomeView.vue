@@ -5,7 +5,7 @@ const loadSplineViewerScript = async () => {
   try {
     // Charger le script SplineViewer en tant que module
     const splineViewerModule = await import(
-      "https://unpkg.com/@splinetool/viewer@1.0.67/build/spline-viewer.js"
+      "https://unpkg.com/@splinetool/viewer@1.0.76/build/spline-viewer.js"
     );
 
     // Retourner le module complet pour que nous puissions y accéder plus tard
