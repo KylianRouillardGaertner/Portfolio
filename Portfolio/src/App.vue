@@ -77,7 +77,9 @@ export default {
               >Contact me</RouterLink
             >
           </li>
-          <li class="mt-8 flex flex-row justify-center gap-[20%] text-[50px]">
+          <li
+            class="md:mt-8 absolute right-10 bottom-10 md:static md:flex md:flex-row md:justify-center md:gap-[10vw] text-[1.5rem] md:text-[50px]"
+          >
             <div>
               <a
                 href="https://www.behance.net/kylianrouilla"
@@ -115,32 +117,16 @@ export default {
     ></span>
     <div class="flex justify-between items-center pt-[27px] pb-[30px] px-5">
       <p class="text-sm md:text-base">&copy; 2024 Kylian Rouillard--Gaertner</p>
-      <li class="flex flex-row items-center" @click="toggleNav">
-        <div class="w-8">
-          <a href="https://www.behance.net/kylianrouilla">
-            <img
-              class="rounded-[3rem]"
-              src="../public/logo/Behance.webp"
-              alt="logo behance"
-            />
-          </a>
+      <li class="flex flex-row items-center gap-[3vh]">
+        <div>
+          <a href="https://www.behance.net/kylianrouilla"> Behance </a>
         </div>
-        <div class="ml-2 w-8">
-          <a href="https://www.instagram.com/kylian_gtn/">
-            <img
-              class="rounded-[3rem]"
-              src="../public/logo/Instagram.webp"
-              alt="logo instagram"
-            />
-          </a>
+        <div>
+          <a href="https://www.instagram.com/kylian_gtn/"> Instagram </a>
         </div>
-        <div class="ml-2 w-8">
+        <div>
           <a href="https://www.linkedin.com/in/kylian-rouillard-gaertner/">
-            <img
-              class="rounded-[3rem]"
-              src="../public/logo/LinkedIn.webp"
-              alt="logo linkedin"
-            />
+            Linkedin
           </a>
         </div>
       </li>

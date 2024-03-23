@@ -1,5 +1,5 @@
 <template>
-  <main class="bg-main h-full pb-14 grid grid-cols-5 grid-rows-1">
+  <main class="bg-main h-full pb-16 grid grid-cols-5 grid-rows-1">
     <div
       class="md:col-span-3 col-span-5 mt-20 text-white flex justify-center items-center flex-col"
     >
