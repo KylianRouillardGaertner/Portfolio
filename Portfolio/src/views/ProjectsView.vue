@@ -12,30 +12,35 @@
         @mouseover="hoverProject(index)"
         @mouseleave="leaveProject()"
       >
-        <h3
-          class="font-semibold absolute top-8 left-6 text-3xl opacity-0"
-          :class="{ 'opacity-100': hoveredProject == index }"
+        <router-link
+          :to="{ name: 'SingleProject', params: { id: project.id } }"
         >
-          {{ project.name }}
-        </h3>
-        <p
-          class="absolute top-[70px] left-6 text-lg opacity-0"
-          :class="{ 'opacity-100': hoveredProject == index }"
-        >
-          {{ project.resume }}
-        </p>
-        <img
-          :src="project.front_img"
-          alt="Project Image"
-          class="w-full h-full object-cover opacity-0 transition duration-500 ease-in-out rounded-lg"
-          :class="{ 'opacity-100': hoveredProject !== index }"
-        />
+          <h3
+            class="font-semibold absolute top-8 left-6 text-3xl opacity-0"
+            :class="{ 'opacity-100': hoveredProject == index }"
+          >
+            {{ project.name }}
+          </h3>
+          <p
+            class="absolute top-[70px] left-6 text-lg opacity-0"
+            :class="{ 'opacity-100': hoveredProject == index }"
+          >
+            {{ project.resume }}
+          </p>
+          <img
+            :src="project.front_img"
+            alt="Project Image"
+            class="w-full h-full object-cover opacity-0 transition duration-500 ease-in-out rounded-lg"
+            :class="{ 'opacity-100': hoveredProject !== index }"
+          />
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { RouterLink } from "vue-router";
 import { ref, onMounted } from "vue";
 import { supabase } from "@/supabase"; // Assurez-vous que le chemin d'importation est correct par rapport à l'emplacement de votre fichier supabase.js
 
@@ -47,7 +52,7 @@ export default {
     onMounted(async () => {
       const { data, error } = await supabase
         .from("Projets")
-        .select("name, front_img, color, resume"); // Sélection de la colonne "name" à la place de "title"
+        .select("name, front_img, color, resume, id"); // Sélection de la colonne "name" à la place de "title"
       if (error) {
         console.error(error);
       } else {
