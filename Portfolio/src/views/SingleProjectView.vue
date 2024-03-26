@@ -1,19 +1,22 @@
 <template>
   <main class="bg-main h-full pt-14">
-    <div class="grid grid-cols-2">
-      <div class="grid grid-rows-3">
+    <div class="grid md:grid-cols-2">
+      <div class="grid md:grid-rows-3 mx-auto md:mx-0 mt-5 md:mt-0">
         <div class="row-start-2 h-auto">
-          <h1 class="text-[8vw] text-right" style="line-height: 1">
+          <h1
+            class="text-5xl md:text-[8vw] text-left md:text-right"
+            style="line-height: 1"
+          >
             {{ project ? project.name : "Loading..." }}
           </h1>
-          <div class="text-right text-[1.8vw]">
+          <div class="text-right md:text-[1.8vw]">
             <p
-              class="inline-block mx-[0.5vw] border-text border-2 rounded-3xl px-[1vw]"
+              class="inline-block mx-1 md:mx-[0.5vw] border-text border-2 rounded-3xl px-2 md:px-[1vw]"
             >
               {{ project ? project.annee : "Loading..." }}
             </p>
             <p
-              class="inline-block mx-[0.5vw] border-text border-2 rounded-3xl px-[1vw]"
+              class="inline-block mx-1 md:mx-[0.5vw] border-text border-2 rounded-3xl px-2 md:px-[1vw]"
               v-for="tag in tags"
               :key="tag.id"
             >
@@ -21,7 +24,7 @@
             </p>
           </div>
         </div>
-        <div class="row-start-3">
+        <div class="hidden md:block row-start-3">
           <div
             class="text-right"
             v-if="project ? project.external_link !== null : 'Loading...'"
@@ -34,8 +37,10 @@
           </div>
         </div>
       </div>
-      <div class="py-10 m-auto">
-        <div class="h-[39vw] w-[32vw]">
+      <div class="my-6 md:my-10 m-auto">
+        <div
+          class="mx-10 md:mx-0 h-[400px] md:h-[39vw] max-w-[350px] md:w-[32vw]"
+        >
           <img
             class="object-cover w-full h-full rounded-2xl"
             :src="project ? project.front_img : 'Loading...'"
@@ -43,9 +48,21 @@
           />
         </div>
       </div>
+      <div class="md:hidden mb-5 mx-auto">
+        <div
+          class="text-right"
+          v-if="project ? project.external_link !== null : 'Loading...'"
+        >
+          <a
+            :href="project ? project.external_link : 'Loading...'"
+            class="underline md:text-[2.5vw]"
+            >Pour consulter le site c'est ici &rarr;</a
+          >
+        </div>
+      </div>
     </div>
-    <div class="grid grid-cols-[2fr,0.75fr,2fr] gap-4">
-      <div class="text-right">
+    <div class="grid md:grid-cols-[2fr,0.75fr,2fr] gap-4">
+      <div class="text-center md:text-right">
         <div
           class="inline-block text-left bg-main-dark py-2 px-5 rounded-md w-[215px]"
         >
@@ -61,7 +78,7 @@
           <p>{{ project ? project.audience : "Loading..." }}</p>
         </div>
       </div>
-      <div>
+      <div class="text-center md:text-left">
         <div
           class="inline-block text-left bg-main-dark py-2 px-5 rounded-md w-[215px]"
         >
@@ -71,7 +88,7 @@
       </div>
     </div>
     <div>
-      <div class="grid grid-cols-2 gap-5 mx-10 mt-24 mb-5">
+      <div class="grid md:grid-cols-2 gap-5 mx-10 mt-10 md:mt-24 mb-5">
         <div class="mx-auto max-h-[700px] max-w-[400px] overflow-hidden">
           <img
             class="object-contain"
@@ -85,15 +102,13 @@
       </div>
     </div>
     <div
-      class="grid grid-cols-2 gap-5 mx-10 mt-10 mb-5"
+      class="grid md:grid-cols-2 gap-5 mx-10 mt-10 mb-5"
       v-if="project && project.image2 !== null"
     >
-      <div class="my-auto text-lg">
+      <div class="hidden md:block my-auto text-lg">
         {{ project ? project.description2 : "Loading..." }}
       </div>
-      <div
-        class="col-start-2 max-h-[680px] max-w-[680px] mx-auto overflow-hidden"
-      >
+      <div class="max-h-[680px] max-w-[680px] mx-auto overflow-hidden">
         <img
           class="object-contain"
           v-if="project.image2"
@@ -101,9 +116,12 @@
           :alt="'Image de ' + project.name"
         />
       </div>
+      <div class="md:hidden my-auto text-lg">
+        {{ project ? project.description2 : "Loading..." }}
+      </div>
     </div>
     <div
-      class="grid grid-cols-2 mx-10 mt-10 mb-5"
+      class="grid md:grid-cols-2 mx-10 mt-10 mb-5"
       v-if="project && project.image3 !== null"
     >
       <div class="max-h-[370px] mx-auto overflow-hidden">
@@ -116,7 +134,7 @@
       </div>
     </div>
     <p
-      class="mx-auto my-10 max-w-[40rem] text-center text-2xl font-semibold underline"
+      class="mx-10 md:mx-auto my-10 max-w-[40rem] text-center text-lg md:text-2xl font-semibold underline"
     >
       Si vous êtes encore ici je vous invite à me contacter &rarr;
     </p>
@@ -131,11 +149,13 @@
       </div>
     </div>
     <div class="mt-10">
-      <h3 class="text-[4vw] ml-10 mb-5" style="line-height: 1">
+      <h3 class="text-xl md:text-[4vw] ml-10 mb-5" style="line-height: 1">
         Spécification du Projet
       </h3>
-      <div class="h-36 text-lg mx-10">
-        <div class="bg-main-dark grid grid-rows-3 h-full pt-3 w-[47vw] ml-auto">
+      <div class="h-36 text-sm md:text-lg mx-10">
+        <div
+          class="bg-main-dark grid grid-rows-3 h-full pt-3 md:w-[47vw] ml-auto"
+        >
           <div
             class="flex justify-between mx-5 border-b-[4px] border-main-light"
           >
@@ -143,11 +163,11 @@
               <p>{{ project ? tags[0]?.name : "Loading..." }}</p>
             </div>
             <div class="my-auto">
-              <p>[Type]</p>
+              <strong>[Type]</strong>
             </div>
           </div>
           <div class="flex my-auto justify-between mx-5">
-            <div class="flex">
+            <div class="flex max-w-10">
               <p>{{ project ? project.outil1 : "Loading..." }}</p>
               <div v-if="project ? project.outil2 !== null : 'Loading...'">
                 <p>,&nbsp;{{ project ? project.outil2 : "Loading..." }}</p>
@@ -157,7 +177,7 @@
               </div>
             </div>
             <div>
-              <p>[Outils]</p>
+              <strong>[Outils]</strong>
             </div>
           </div>
           <div class="flex justify-between mx-5">
@@ -167,7 +187,7 @@
               </p>
             </div>
             <div>
-              <p>[Année]</p>
+              <strong>[Année]</strong>
             </div>
           </div>
         </div>
