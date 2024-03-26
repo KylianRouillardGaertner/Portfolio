@@ -39,11 +39,11 @@
       </div>
       <div class="my-6 md:my-10 m-auto">
         <div
-          class="mx-10 md:mx-0 h-[400px] md:h-[39vw] max-w-[350px] md:w-[32vw]"
+          class="mx-10 md:mx-0 h-[400px] md:h-[39vw] max-w-[350px] md:max-w-none md:w-[32vw]"
         >
           <img
             class="object-cover w-full h-full rounded-2xl"
-            :src="project ? project.front_img : 'Loading...'"
+            :src="project ? project.front_image_single : 'Loading...'"
             :alt="'Image ' + (project ? project.name : 'Loading...')"
           />
         </div>
@@ -102,7 +102,7 @@
       </div>
     </div>
     <div
-      class="grid md:grid-cols-2 gap-5 mx-10 mt-10 mb-5"
+      class="grid md:grid-cols-2 gap-5 mx-10 mt-5 md:mt-10 mb-5"
       v-if="project && project.image2 !== null"
     >
       <div class="hidden md:block my-auto text-lg">
@@ -121,7 +121,7 @@
       </div>
     </div>
     <div
-      class="grid md:grid-cols-2 mx-10 mt-10 mb-5"
+      class="grid md:grid-cols-2 mx-10 mt-5 md:mt-10 mb-5"
       v-if="project && project.image3 !== null"
     >
       <div class="max-h-[370px] mx-auto overflow-hidden">
@@ -133,11 +133,14 @@
         />
       </div>
     </div>
-    <p
-      class="mx-10 md:mx-auto my-10 max-w-[40rem] text-center text-lg md:text-2xl font-semibold underline"
-    >
-      Si vous êtes encore ici je vous invite à me contacter &rarr;
-    </p>
+    <div class="mx-10 my-10 text-center">
+      <a
+        href="mailto:kylian.gaertner@gmail.com"
+        class="mx-auto max-w-[40rem] text-lg md:text-2xl font-semibold underline"
+      >
+        Si vous êtes encore ici je vous invite à me contacter &rarr;
+      </a>
+    </div>
     <div class="flex mx-10 my-5" v-if="project && project.image4 !== null">
       <div class="max-h-[400px] max-w-[850px] mx-auto overflow-hidden">
         <img
@@ -148,7 +151,7 @@
         />
       </div>
     </div>
-    <div class="mt-10">
+    <div class="mt-5 md:mt-10">
       <h3 class="text-xl md:text-[4vw] ml-10 mb-5" style="line-height: 1">
         Spécification du Projet
       </h3>
