@@ -69,20 +69,58 @@
       </div>
     </div>
     <div>
+      <div class="grid grid-cols-2 mt-24">
+        <div class="mx-auto h-[700px] w-[400px] overflow-hidden">
+          <img
+            class="object-contain"
+            :src="project ? project.image1 : 'Loading...'"
+            :alt="'Image de' + (project ? project.name : 'Loading...')"
+          />
+        </div>
+        <div class="my-auto">
+          <p>{{ project ? project.description : "Loading..." }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-10">
       <h3 class="text-5xl ml-10 mb-5">Spécification du Projet</h3>
-      <div class="h-60">
-        <div class="bg-white grid grid-rows-3 h-full w-[50rem] ml-auto mr-10">
-          <div>
-            <div></div>
-            <div></div>
+      <div class="h-36">
+        <div
+          class="bg-main-dark grid grid-rows-3 h-full pt-3 w-[45rem] ml-auto mr-10"
+        >
+          <div
+            class="flex justify-between mx-5 border-b-[3px] border-main-light"
+          >
+            <div class="my-auto">
+              <p>{{ project ? tags[0]?.name : "Loading..." }}</p>
+            </div>
+            <div class="my-auto">
+              <p>[Type]</p>
+            </div>
           </div>
-          <div>
-            <div></div>
-            <div></div>
+          <div class="flex my-auto justify-between mx-5">
+            <div class="flex">
+              <p>{{ project ? project.outil1 : "Loading..." }}</p>
+              <div v-if="project ? project.outil2 !== null : 'Loading...'">
+                <p>,&nbsp;{{ project ? project.outil2 : "Loading..." }}</p>
+              </div>
+              <div v-if="project ? project.outil3 !== null : 'Loading...'">
+                <p>,&nbsp;{{ project ? project.outil3 : "Loading..." }}</p>
+              </div>
+            </div>
+            <div>
+              <p>[Outils]</p>
+            </div>
           </div>
-          <div>
-            <div></div>
-            <div></div>
+          <div class="flex justify-between mx-5">
+            <div>
+              <p>
+                {{ project ? project.annee : "Loading..." }}
+              </p>
+            </div>
+            <div>
+              <p>[Année]</p>
+            </div>
           </div>
         </div>
       </div>
