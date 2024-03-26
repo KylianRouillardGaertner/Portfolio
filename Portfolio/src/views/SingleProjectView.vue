@@ -3,15 +3,17 @@
     <div class="grid grid-cols-2">
       <div class="grid grid-rows-3">
         <div class="row-start-2 h-auto">
-          <h1 class="text-8xl text-right">
+          <h1 class="text-[8vw] text-right" style="line-height: 1">
             {{ project ? project.name : "Loading..." }}
           </h1>
-          <div class="text-right text-lg">
-            <p class="inline-block mx-2 border-text border-2 rounded-3xl px-4">
+          <div class="text-right text-[1.8vw]">
+            <p
+              class="inline-block mx-[0.5vw] border-text border-2 rounded-3xl px-[1vw]"
+            >
               {{ project ? project.annee : "Loading..." }}
             </p>
             <p
-              class="inline-block mx-2 border-text border-2 rounded-3xl px-4"
+              class="inline-block mx-[0.5vw] border-text border-2 rounded-3xl px-[1vw]"
               v-for="tag in tags"
               :key="tag.id"
             >
@@ -26,14 +28,14 @@
           >
             <a
               :href="project ? project.external_link : 'Loading...'"
-              class="underline text-3xl"
+              class="underline text-[2.5vw]"
               >Pour consulter le site c'est ici &rarr;</a
             >
           </div>
         </div>
       </div>
       <div class="py-10 m-auto">
-        <div class="h-[600px] w-[500px]">
+        <div class="h-[39vw] w-[32vw]">
           <img
             class="object-cover w-full h-full rounded-2xl"
             :src="project ? project.front_img : 'Loading...'"
@@ -42,10 +44,10 @@
         </div>
       </div>
     </div>
-    <div class="grid grid-cols-[2fr,1fr,2fr]">
+    <div class="grid grid-cols-[2fr,0.75fr,2fr] gap-4">
       <div class="text-right">
         <div
-          class="inline-block text-left bg-main-dark py-2 px-5 rounded-md max-w-[215px]"
+          class="inline-block text-left bg-main-dark py-2 px-5 rounded-md w-[215px]"
         >
           <h4 class="text-3xl">Mission :</h4>
           <p>{{ project ? project.mission : "Loading..." }}</p>
@@ -53,7 +55,7 @@
       </div>
       <div class="text-center">
         <div
-          class="inline-block text-left bg-main-dark py-2 px-5 rounded-md max-w-[215px]"
+          class="inline-block text-left bg-main-dark py-2 px-5 rounded-md w-[215px]"
         >
           <h4 class="text-3xl">Audience :</h4>
           <p>{{ project ? project.audience : "Loading..." }}</p>
@@ -61,7 +63,7 @@
       </div>
       <div>
         <div
-          class="inline-block text-left bg-main-dark py-2 px-5 rounded-md max-w-[215px]"
+          class="inline-block text-left bg-main-dark py-2 px-5 rounded-md w-[215px]"
         >
           <h4 class="text-3xl">Solution :</h4>
           <p>{{ project ? project.solution : "Loading..." }}</p>
@@ -129,11 +131,11 @@
       </div>
     </div>
     <div class="mt-10">
-      <h3 class="text-5xl ml-10 mb-5">Spécification du Projet</h3>
-      <div class="h-36 text-lg">
-        <div
-          class="bg-main-dark grid grid-rows-3 h-full pt-3 w-[45rem] ml-auto mr-10"
-        >
+      <h3 class="text-[4vw] ml-10 mb-5" style="line-height: 1">
+        Spécification du Projet
+      </h3>
+      <div class="h-36 text-lg mx-10">
+        <div class="bg-main-dark grid grid-rows-3 h-full pt-3 w-[47vw] ml-auto">
           <div
             class="flex justify-between mx-5 border-b-[4px] border-main-light"
           >
