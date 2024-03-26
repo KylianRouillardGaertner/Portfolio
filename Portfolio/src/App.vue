@@ -57,7 +57,7 @@ export default {
           </svg>
         </button>
         <ul
-          class="list-none font-bold text-[2rem] md:text-[5rem] h-full flex mt-12 md:mt-6 md:justify-center md:items-center flex-col"
+          class="list-none font-bold text-[2rem] md:text-[5vw] h-full flex mt-12 md:mt-6 md:justify-center md:items-center flex-col"
         >
           <li @click="toggleNav">
             <RouterLink to="/" class="font-Rounded_Bold">Accueil</RouterLink>
@@ -78,7 +78,7 @@ export default {
             >
           </li>
           <li
-            class="md:mt-8 absolute right-10 bottom-10 md:static md:flex md:flex-row md:justify-center md:gap-[10vw] text-[1.5rem] md:text-[50px]"
+            class="md:mt-8 absolute right-10 bottom-10 md:static md:flex md:flex-row md:justify-center md:gap-[10vw] text-[1.5rem] md:text-[3.25vw]"
           >
             <div>
               <a
@@ -115,9 +115,13 @@ export default {
     <span
       class="inline-block w-full h-[0.15rem] bg-main-dark rounded-full"
     ></span>
-    <div class="flex justify-between items-center pt-[27px] pb-[30px] px-5">
+    <div
+      class="grid md:flex justify-between items-center pt-[27px] pb-[30px] px-5"
+    >
       <p class="text-sm md:text-base">&copy; 2024 Kylian Rouillard--Gaertner</p>
-      <li class="flex flex-row items-center gap-[3vh]">
+      <li
+        class="flex flex-col text-sm md:text-base md:flex-row md:items-center gap-1 mt-7 md:mt-0 md:gap-[3vh]"
+      >
         <div>
           <a href="https://www.behance.net/kylianrouilla"> Behance </a>
         </div>

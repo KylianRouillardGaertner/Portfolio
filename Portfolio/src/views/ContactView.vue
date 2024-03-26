@@ -1,30 +1,42 @@
 <template>
   <main class="bg-main h-full pb-16 grid grid-cols-5 grid-rows-1">
     <div
-      class="md:col-span-3 col-span-5 mt-20 text-white flex justify-center items-center flex-col"
+      class="md:col-span-3 col-span-5 mt-24 md:mt-20 text-white flex justify-center items-center flex-col"
     >
       <div>
         <div class="flex flex-row items-center mb-7">
-          <img class="w-10 m-2 mr-7" src="../../public/svg/pin.svg" alt="" />
+          <img
+            class="w-10 md:m-2 mr-4 md:mr-7"
+            src="../../public/svg/pin.svg"
+            alt=""
+          />
           <p class="text-base md:text-xl">
-            <strong>Adresse:</strong> Xx Rue palworld boum
+            <strong>Adresse:</strong> 23 Rue Maurice Ravel
           </p>
         </div>
         <div class="flex flex-row items-center mb-7">
-          <img class="w-10 m-2 mr-7" src="../../public/svg/phone.svg" alt="" />
+          <img
+            class="w-10 md:m-2 mr-4 md:mr-7"
+            src="../../public/svg/phone.svg"
+            alt=""
+          />
           <p class="text-base md:text-xl">
-            <strong>Tel:</strong> 07 67 XX XX XX
+            <strong>Tel:</strong> 07 67 26 78 64
           </p>
         </div>
         <div class="flex flex-row items-center">
-          <img class="w-10 m-2 mr-7" src="../../public/svg/mail.svg" alt="" />
+          <img
+            class="w-10 md:m-2 mr-4 md:mr-7"
+            src="../../public/svg/mail.svg"
+            alt=""
+          />
           <p class="text-base md:text-xl">
-            <strong>Mail:</strong> Exemple123@gmail.com
+            <strong>Mail:</strong> Kylian.gaertner@gmail.com
           </p>
         </div>
       </div>
     </div>
-    <div class="md:col-span-2 col-span-5 mx-16 mt-20">
+    <div class="md:col-span-2 col-span-5 mx-16 mt-10 md:mt-20">
       <form action="">
         <div class="flex flex-col mb-4 md:flex-row md:justify-between">
           <div class="flex flex-col mb-4 md:w-1/2 md:mr-2">

@@ -1,9 +1,9 @@
 <template>
   <div class="bg-main h-full pt-20 pb-14">
     <div>
-      <h1 class="text-6xl mb-6 pl-10">Quelques uns de mes projets</h1>
+      <h1 class="text-[6vw] mb-6 pl-10">Quelques uns de mes projets</h1>
     </div>
-    <div class="grid grid-cols-2 gap-5 px-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 px-10">
       <div
         v-for="(project, index) in projects"
         :key="index"
