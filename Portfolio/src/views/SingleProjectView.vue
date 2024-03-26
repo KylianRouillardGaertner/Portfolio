@@ -69,27 +69,73 @@
       </div>
     </div>
     <div>
-      <div class="grid grid-cols-2 mt-24">
-        <div class="mx-auto h-[700px] w-[400px] overflow-hidden">
+      <div class="grid grid-cols-2 gap-5 mx-10 mt-24 mb-5">
+        <div class="mx-auto max-h-[700px] max-w-[400px] overflow-hidden">
           <img
             class="object-contain"
             :src="project ? project.image1 : 'Loading...'"
             :alt="'Image de' + (project ? project.name : 'Loading...')"
           />
         </div>
-        <div class="my-auto">
+        <div class="my-auto text-lg">
           <p>{{ project ? project.description : "Loading..." }}</p>
         </div>
       </div>
     </div>
+    <div
+      class="grid grid-cols-2 gap-5 mx-10 mt-10 mb-5"
+      v-if="project && project.image2 !== null"
+    >
+      <div class="my-auto text-lg">
+        {{ project ? project.description2 : "Loading..." }}
+      </div>
+      <div
+        class="col-start-2 max-h-[680px] max-w-[680px] mx-auto overflow-hidden"
+      >
+        <img
+          class="object-contain"
+          v-if="project.image2"
+          :src="project.image2"
+          :alt="'Image de ' + project.name"
+        />
+      </div>
+    </div>
+    <div
+      class="grid grid-cols-2 mx-10 mt-10 mb-5"
+      v-if="project && project.image3 !== null"
+    >
+      <div class="max-h-[370px] mx-auto overflow-hidden">
+        <img
+          class="col-start-1"
+          v-if="project.image3"
+          :src="project.image3"
+          :alt="'Image de ' + project.name"
+        />
+      </div>
+    </div>
+    <p
+      class="mx-auto my-10 max-w-[40rem] text-center text-2xl font-semibold underline"
+    >
+      Si vous êtes encore ici je vous invite à me contacter &rarr;
+    </p>
+    <div class="flex mx-10 my-5" v-if="project && project.image4 !== null">
+      <div class="max-h-[400px] max-w-[850px] mx-auto overflow-hidden">
+        <img
+          class="col-start-1"
+          v-if="project.image4"
+          :src="project.image4"
+          :alt="'Image de ' + project.name"
+        />
+      </div>
+    </div>
     <div class="mt-10">
       <h3 class="text-5xl ml-10 mb-5">Spécification du Projet</h3>
-      <div class="h-36">
+      <div class="h-36 text-lg">
         <div
           class="bg-main-dark grid grid-rows-3 h-full pt-3 w-[45rem] ml-auto mr-10"
         >
           <div
-            class="flex justify-between mx-5 border-b-[3px] border-main-light"
+            class="flex justify-between mx-5 border-b-[4px] border-main-light"
           >
             <div class="my-auto">
               <p>{{ project ? tags[0]?.name : "Loading..." }}</p>
