@@ -11,19 +11,19 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      isLoading: true, // Définir la superposition de chargement comme visible par défaut
-    };
-  },
-  mounted() {
-    // Cacher la superposition de chargement lorsque le chargement initial de la page est terminé
-    setTimeout(() => {
-      this.isLoading = false;
-    }, 4000);
-  },
-};
+// export default {
+//   data() {
+//     return {
+//       isLoading: true, // Définir la superposition de chargement comme visible par défaut
+//     };
+//   },
+//   mounted() {
+//     // Cacher la superposition de chargement lorsque le chargement initial de la page est terminé
+//     setTimeout(() => {
+//       this.isLoading = false;
+//     }, 4000);
+//   },
+// };
 </script>
 
 <style>

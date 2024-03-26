@@ -17,8 +17,22 @@
     <p>{{ project ? project.audience : "Loading..." }}</p>
     <p>{{ project ? project.solution : "Loading..." }}</p>
     <p>{{ project ? project.description : "Loading..." }}</p>
+    <p>{{ project ? project.annee : "Loading..." }}</p>
     <div v-for="tag in tags" :key="tag.id">
       {{ tag.name }}
+    </div>
+    <p>{{ project ? project.outil1 : "Loading..." }}</p>
+    <div v-if="project ? project.outil2 !== null : 'Loading...'">
+      <p>{{ project ? project.outil2 : "Loading..." }}</p>
+    </div>
+    <div v-if="project ? project.outil3 !== null : 'Loading...'">
+      <p>{{ project ? project.outil3 : "Loading..." }}</p>
+    </div>
+    <div v-if="project ? project.image1 !== null : 'Loading...'">
+      <img
+        :src="project ? project.image1 : 'Loading...'"
+        :alt="'Image de' + (project ? project.name : 'Loading...')"
+      />
     </div>
     <!-- Afficher d'autres détails du projet selon votre besoin -->
   </div>

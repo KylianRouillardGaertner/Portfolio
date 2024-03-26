@@ -22,7 +22,7 @@
             {{ project.name }}
           </h3>
           <p
-            class="absolute top-[70px] left-6 text-lg opacity-0"
+            class="absolute top-[70px] left-6 right-6 text-lg opacity-0"
             :class="{ 'opacity-100': hoveredProject == index }"
           >
             {{ project.resume }}
