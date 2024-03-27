@@ -31,7 +31,7 @@
           >
             <a
               :href="project ? project.external_link : 'Loading...'"
-              class="underline text-[2.5vw]"
+              class="underline md:text-[2.5vw]"
               >Pour consulter le site c'est ici &rarr;</a
             >
           </div>
